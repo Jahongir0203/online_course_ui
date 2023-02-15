@@ -126,17 +126,19 @@ class HomeScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return Padding(
                           padding: const EdgeInsets.only(left: 20),
-                          child: Stack(
-                            children: [Container(
+                          child: Stack(children: [
+                            Container(
                               margin: EdgeInsets.only(left: 20),
-                              padding: EdgeInsets.only(left: 100,right: 10,bottom: 15,top: 10),
+                              padding: EdgeInsets.only(
+                                  left: 100, right: 10, bottom: 15, top: 10),
                               decoration: BoxDecoration(
                                 color: Color(0xFFF8FAFB),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     Courses[index],
@@ -146,7 +148,6 @@ class HomeScreen extends StatelessWidget {
                                       color: Colors.blue,
                                     ),
                                   ),
-
                                   Row(
                                     children: [
                                       Text(
@@ -162,11 +163,13 @@ class HomeScreen extends StatelessWidget {
                                         '4.3',
                                         style: TextStyle(color: Colors.black54),
                                       ),
-                                      Icon(Icons.star, color: Colors.blue,
-                                      size: 15,),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.blue,
+                                        size: 15,
+                                      ),
                                     ],
                                   ),
-
                                   Row(
                                     children: [
                                       Text(
@@ -175,20 +178,24 @@ class HomeScreen extends StatelessWidget {
                                           color: Colors.blue,
                                         ),
                                       ),
-                                      SizedBox(width: 40,),
+                                      SizedBox(
+                                        width: 40,
+                                      ),
                                       InkWell(
-                                        onTap: (){},
+                                        onTap: () {},
                                         child: Container(
                                           padding: EdgeInsets.all(3),
                                           decoration: BoxDecoration(
                                             color: Colors.blue,
-                                            borderRadius:BorderRadius.circular(5),
+                                            borderRadius:
+                                                BorderRadius.circular(5),
                                           ),
-                                          child: Icon(Icons.add,
-                                          color: Colors.white,
-                                          size: 20,),
+                                          child: Icon(
+                                            Icons.add,
+                                            color: Colors.white,
+                                            size: 20,
+                                          ),
                                         ),
-
                                       )
                                     ],
                                   )
@@ -198,20 +205,23 @@ class HomeScreen extends StatelessWidget {
                             Center(
                               child: Padding(
                                 padding: EdgeInsets.only(right: 40),
-                                child:ClipRRect(
+                                child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20),
-                                  child:Image(image: AssetImage('images/${Courses[index]}.png',),
-                                  height: 80,),
+                                  child: Image(
+                                    image: AssetImage(
+                                      'images/${Courses[index]}.png',
+                                    ),
+                                    height: 80,
+                                  ),
                                 ),
                               ),
                             )
-                            ]
-                          ),
+                          ]),
                         );
                       }),
                 ),
                 SizedBox(
-                  height:30,
+                  height: 30,
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 15),
@@ -227,51 +237,65 @@ class HomeScreen extends StatelessWidget {
                   shrinkWrap: true,
                   itemCount: Courses.length,
                   physics: NeverScrollableScrollPhysics(),
-                  gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-                itemBuilder: (context,index){
-                  return InkWell(
-                    onTap: (){},
-                    child: Container(
-                      margin: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: Color(0xFFF8FAFB),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [Text(Courses[index],
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black,
-                        ),),
-                          SizedBox(height: 10,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [Text('24 lessons',
-                            style: TextStyle(
-                              color: Colors.black54,
-                            ),),
-
-                              Row(
-                                children: [
-                                  Text('4.3',
-                                    style: TextStyle(
-                                      color: Colors.black54,
-                                    ),),
-                                  Icon(Icons.star,
-                                  size: 18,
-                                  color: Colors.blue,),
-                                ],
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2),
+                  itemBuilder: (context, index) {
+                    return InkWell(
+                      onTap: () {},
+                      child: Container(
+                        margin:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Color(0xFFF8FAFB),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              Courses[index],
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
                               ),
-                            ],
-                          ),
-                        ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '24 lessons',
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    Text(
+                                      '4.3',
+                                      style: TextStyle(
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      size: 18,
+                                      color: Colors.blue,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  );
-                },),
+                    );
+                  },
+                ),
               ],
             ),
           ),
