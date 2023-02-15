@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'source_screen.dart';
 class HomeScreen extends StatelessWidget {
   List Categories = [
     'UI/UX',
@@ -241,7 +241,11 @@ class HomeScreen extends StatelessWidget {
                       crossAxisCount: 2),
                   itemBuilder: (context, index) {
                     return InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context,
+                          MaterialPageRoute(builder: (context){return SourceScreen();})
+                        );
+                      },
                       child: Container(
                         margin:
                             EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -256,13 +260,13 @@ class HomeScreen extends StatelessWidget {
                             Text(
                               Courses[index],
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 15,
                                 fontWeight: FontWeight.w500,
                                 color: Colors.black,
                               ),
                             ),
                             SizedBox(
-                              height: 10,
+                              height:5,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -289,6 +293,18 @@ class HomeScreen extends StatelessWidget {
                                   ],
                                 ),
                               ],
+                            ),
+                            Padding(
+                              padding: EdgeInsets.all(10),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image(
+                                  image: AssetImage(
+                                    'images/${Courses[index]}.png',
+                                  ),
+                                  height: 90,
+                                ),
+                              ),
                             ),
                           ],
                         ),
