@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SourceScreen extends StatelessWidget {
@@ -55,17 +56,127 @@ class SourceScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400,
                                       ),
                                     ),
-                                    Row(children: [
-                                      Text('4.3',style: TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize:20
-                                      ),),
-                                      SizedBox(width:5,),
-                                      Icon(Icons.star,color: Colors.blue,
-                                          size: 25,),
-
-                                    ],)
+                                    Row(
+                                      children: [
+                                        Text(
+                                          '4.3',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 20),
+                                        ),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.blue,
+                                          size: 25,
+                                        ),
+                                      ],
+                                    ),
                                   ],
+                                ),
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Container(
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 10),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Text(
+                                            '24',
+                                            style: TextStyle(
+                                              color: Colors.blue,
+                                              fontSize: 18,
+                                            ),
+                                          ),
+                                          Text(
+                                            'Classes',
+                                            style: TextStyle(
+                                              color: Colors.black54,
+                                              fontSize: 15,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 10),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Text(
+                                            '2',
+                                            style: TextStyle(
+                                              color: Colors.blue,
+                                              fontSize: 18,
+                                            ),
+                                          ),
+                                          Text(
+                                            'Hours',
+                                            style: TextStyle(
+                                              color: Colors.black54,
+                                              fontSize: 16,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 10),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Text(
+                                            '100',
+                                            style: TextStyle(
+                                              color: Colors.blue,
+                                              fontSize: 18,
+                                            ),
+                                          ),
+                                          Text(
+                                            'Seats',
+                                            style: TextStyle(
+                                              color: Colors.black54,
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                Text(
+                                  'Join the Web Development courses , in this course, you will learn HTML, CSS, BOTTSTARP, Javascript, Php or Java for the Backend ',
+                                  style: TextStyle(
+                                      color: Colors.black54, fontSize: 17),
+                                  textAlign: TextAlign.justify,
                                 ),
                               ],
                             ),
@@ -99,6 +210,43 @@ class SourceScreen extends StatelessWidget {
               ),
             ),
           ),
-        ));
+        ),
+      bottomNavigationBar: Container(
+        height: 80,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              height:50,
+              width:60,
+              decoration: BoxDecoration(
+                color: Colors.black38,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Icon(CupertinoIcons.multiply_square,
+                color: Colors.black45,
+              ),
+
+            ),
+            Container(
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              width:MediaQuery.of(context).size.width/1.3,
+              child: Center(
+                child: Text('Join  course',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
